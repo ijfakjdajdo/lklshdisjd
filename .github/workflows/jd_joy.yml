@@ -4,6 +4,12 @@
 name: jd_joy
 
 on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
   workflow_dispatch:
   schedule:
     - cron: '0 0,1,4,10,15,16 * * *'
@@ -11,9 +17,7 @@ on:
     types: started
   repository_dispatch:
     types: joy
-  push:
-    branches:
-      - master
+
 jobs:
   build:
 
