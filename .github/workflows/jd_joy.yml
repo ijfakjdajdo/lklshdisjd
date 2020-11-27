@@ -11,6 +11,9 @@ on:
     types: started
   repository_dispatch:
     types: joy
+  push:
+    branches:
+      - master
 jobs:
   build:
 
