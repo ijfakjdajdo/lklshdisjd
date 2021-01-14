@@ -17,11 +17,15 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          repository: lxk0301/jd_scripts
-          ref: master
+      # - name: Checkout
+      #   uses: actions/checkout@v2
+      #   with:
+      #     repository: lxk0301/jd_scripts
+      #     ref: master
+      - name: Clone repo
+        run: |
+          git clone https://gitee.com/lxk0301/jd_scripts/tree/master/
+          cd jd_scripts
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
