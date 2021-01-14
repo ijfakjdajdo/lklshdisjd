@@ -25,6 +25,9 @@ jobs:
       - name: Checkout
         run: |
           git clone -b master https://gitee.com/lxk0301/jd_scripts.git ~/jd_scripts
+      - name: CD dir
+        run: |
+          cd ~/jd_scripts
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -41,7 +44,7 @@ jobs:
           npm install
       - name: '运行 【东东农场】'
         run: |
-          node ~/jd_scripts/jd_fruit.js
+          node ./jd_fruit.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
