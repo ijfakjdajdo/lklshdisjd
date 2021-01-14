@@ -24,7 +24,7 @@ jobs:
       #     ref: master
       - name: Clone repo
         run: |
-          git clone https://gitee.com/lxk0301/jd_scripts/tree/master/
+          git clone -b master https://gitee.com/lxk0301/jd_scripts.git
           cd jd_scripts
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
