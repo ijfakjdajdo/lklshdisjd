@@ -7,3 +7,7 @@
 
 1. 配置相关action环境变量.
 2. 点击star运行所有action脚本或者手动运行相关action.
+
+
+# 暂时使用zsh35的同步库
+[jd_scripts](https://github.com/zsh35/jd_scripts)
