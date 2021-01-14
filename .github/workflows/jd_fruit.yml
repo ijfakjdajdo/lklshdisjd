@@ -24,7 +24,8 @@ jobs:
       #     ref: master
       - name: Checkout
         run: |
-          git clone -b master https://gitee.com/lxk0301/jd_scripts.git ~/jd_scripts
+          git clone -b master https://gitee.com/lxk0301/jd_scripts.git ~/jd_scripts |
+          ls
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
