@@ -13,8 +13,9 @@ on:
     types: fruit
 jobs:
   build:
-
     runs-on: ubuntu-latest
+    env: 
+      working-directory: ./jd_scripts
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
       # - name: Checkout
@@ -24,10 +25,14 @@ jobs:
       #     ref: master
       - name: Checkout
         run: |
-          git clone -b master https://gitee.com/lxk0301/jd_scripts.git ~/jd_scripts
-      - name: CD dir
+          git clone -b master https://gitee.com/lxk0301/jd_scripts.git
+      - name: listFs
         run: |
-          cd ~/jd_scripts
+          ls -R
+      - name: listFs2
+        run: |
+          ls -R
+        working-directory: ${{ env.working-directory }}
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
