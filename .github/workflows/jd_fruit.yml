@@ -26,13 +26,6 @@ jobs:
       - name: Checkout
         run: |
           git clone -b master https://gitee.com/lxk0301/jd_scripts.git
-      - name: listFs
-        run: |
-          ls -R
-      - name: listFs2
-        run: |
-          ls -R
-        working-directory: ${{ env.working-directory }}
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -50,6 +43,7 @@ jobs:
       - name: '运行 【东东农场】'
         run: |
           node ./jd_fruit.js
+        working-directory: ${{ env.working-directory }}
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
