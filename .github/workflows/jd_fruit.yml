@@ -19,11 +19,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: zsh35/jd_scripts
+          repository: vidocqh/jd_scripts
           ref: master
       # - name: Checkout
       #   run: |
-      #     git clone -b master https://gitee.com/zsh35/jd_scripts.git ~/jd_actions_vi/jd_actions_vi
+      #     git clone -b master https://gitee.com/vidocqh/jd_scripts.git ~/jd_actions_vi/jd_actions_vi
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
