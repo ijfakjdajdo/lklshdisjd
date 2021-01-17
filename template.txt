@@ -1,16 +1,16 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: jd_joy_run
+name: $filename
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '10 10,11 * * *'
+    - cron: '$cron'
   watch:
     types: [started]
   repository_dispatch:
-    types: joy_run
+    types: $nameEN
 jobs:
   build:
 
@@ -36,9 +36,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【宠汪汪邀请助力】'
+      - name: '运行 【$nameCN】'
         run: |
-          node jd_joy_run.js
+          $comm
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
