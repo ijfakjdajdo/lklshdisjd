@@ -36,6 +36,9 @@ jobs:
       - name: npm install
         run: |
           npm install
+      - name: 'list'
+        run: |
+          ls -lha
       - name: '运行 【京东炸年兽AR】'
         run: |
           node jd_nian_ar.js
