@@ -11,7 +11,7 @@ for root, dirs, files in os.walk(fileDir):
             continue
         fileList.append(os.path.join(root, fileObj))
 
-restr = r"JSON\.stringify\(process\.env\)\.indexOf\(['\"]GITHUB['\"]\)>-1"
+pattern = r"JSON\.stringify\(process\.env\)\.indexOf\(['\"]GITHUB['\"]\)>-1"
 for fileObj in fileList:
     if 'sorryLXK' in fileObj:
         continue
@@ -20,8 +20,7 @@ for fileObj in fileList:
     f.close()
     f = open(fileObj, 'w')
     for line in lines:
-        result = '0'
-        line = re.sub(restr, result, line)
+        line = re.sub(pattern, '0', line)
         f.write(line)
     f.close()
 print("脚本结束")
