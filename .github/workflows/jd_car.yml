@@ -36,6 +36,9 @@ jobs:
       - name: npm install
         run: |
           npm install
+      - name: run script
+        run: |
+          python3 sorryLXK.py
       - name: '运行 【京东汽车(签到满500赛点可兑换500京豆)】'
         run: |
           node jd_car.js

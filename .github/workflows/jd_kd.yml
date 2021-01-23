@@ -36,6 +36,9 @@ jobs:
       - name: npm install
         run: |
           npm install
+      - name: run script
+        run: |
+          python3 sorryLXK.py
       - name: '运行 【京东快递签到】'
         run: |
           node jd_kd.js

@@ -36,6 +36,9 @@ jobs:
       - name: npm install
         run: |
           npm install
+      - name: run script
+        run: |
+          python3 sorryLXK.py
       - name: '运行 【京东神仙书院(活动时间:2021-1-20至2021-2-5)】'
         run: |
           node jd_immortal.js

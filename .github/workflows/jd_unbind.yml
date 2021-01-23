@@ -36,6 +36,9 @@ jobs:
       - name: npm install
         run: |
           npm install
+      - name: run script
+        run: |
+          python3 sorryLXK.py
       - name: '运行 【注销京东已开的店铺会员，不是注销京东plus会员，个别店铺无法注销】'
         run: |
           node jd_unbind.js

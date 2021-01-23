@@ -36,6 +36,9 @@ jobs:
       - name: npm install
         run: |
           npm install
+      - name: run script
+        run: |
+          python3 sorryLXK.py
       - name: '运行 【东东超市兑换奖品】'
         run: |
           node jd_blueCoin.js

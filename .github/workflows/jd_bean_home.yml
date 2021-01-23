@@ -36,6 +36,9 @@ jobs:
       - name: npm install
         run: |
           npm install
+      - name: run script
+        run: |
+          python3 sorryLXK.py
       - name: '运行 【领京豆额外奖励(每日可获得3京豆)】'
         run: |
           node jd_bean_home.js

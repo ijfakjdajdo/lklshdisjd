@@ -6,7 +6,7 @@ name: jd_small_home
 on:
   workflow_dispatch:
   schedule:
-    - cron: '16 6 * * *'
+    - cron: '16 6,23 * * *'
   watch:
     types: [started]
   repository_dispatch:
@@ -36,6 +36,9 @@ jobs:
       - name: npm install
         run: |
           npm install
+      - name: run script
+        run: |
+          python3 sorryLXK.py
       - name: '运行 【东东小窝】'
         run: |
           node jd_small_home.js

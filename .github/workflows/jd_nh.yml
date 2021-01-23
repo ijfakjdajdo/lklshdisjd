@@ -36,6 +36,9 @@ jobs:
       - name: npm install
         run: |
           npm install
+      - name: run script
+        run: |
+          python3 sorryLXK.py
       - name: '运行 【年货节(活动时间：2021年1月9日-2021年2月9日)】'
         run: |
           node jd_nh.js
