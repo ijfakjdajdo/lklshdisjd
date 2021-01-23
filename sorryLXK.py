@@ -2,6 +2,7 @@
 import os
 import re
 
+print("脚本开始")
 fileDir = "./"
 fileList = []
 for root, dirs, files in os.walk(fileDir):
@@ -23,3 +24,4 @@ for fileObj in fileList:
         line = re.sub(restr, result, line)
         f.write(line)
     f.close()
+print("脚本结束")
