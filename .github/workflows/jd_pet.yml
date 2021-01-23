@@ -38,7 +38,6 @@ jobs:
           npm install
       - name: '运行 【东东萌宠】'
         run: |
-          sed -i 's/JSON.stringify(process.env).indexOf("GITHUB")>-1/0/g' `grep 'JSON.stringify(process.env).indexOf("GITHUB")>-1' -rl --include="*.*" ./`
           node jd_pet.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
