@@ -6,7 +6,7 @@ name: jd_kd
 on:
   workflow_dispatch:
   schedule:
-    - cron: '23 1 * * *'
+    - cron: '23 17 * * *'
   watch:
     types: [started]
   repository_dispatch:

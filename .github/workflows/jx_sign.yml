@@ -6,7 +6,7 @@ name: jx_sign
 on:
   workflow_dispatch:
   schedule:
-    - cron: '39 7 * * *'
+    - cron: '39 23 * * *'
   watch:
     types: [started]
   repository_dispatch:
