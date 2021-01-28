@@ -2,4 +2,5 @@
 # actions均已不能用，勿Fork
 
 [给自己的TP点](https://github.com/VidocqH/jd_scripts/blob/master/docker/crontab_list.sh)
-[SHARECODES](https://github.com/LXK9301/jd_scripts/blob/master/githubAction.md)
+
+[SHARECODES](https://github.com/VidocqH/jd_scripts/blob/master/githubAction.md)
