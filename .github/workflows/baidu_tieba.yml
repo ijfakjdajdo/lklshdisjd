@@ -10,10 +10,11 @@ on:
 jobs:
   run-it:
     runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
     name: baidu_tieba
     steps:
-      - name: Checkout master
-        uses: actions/checkout@master
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           repository: bebestmaple/Tieba_Github-Actions
           ref: master
