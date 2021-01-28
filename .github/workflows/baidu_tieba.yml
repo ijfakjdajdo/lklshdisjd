@@ -1,6 +1,7 @@
 name: baidu_tieba
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
