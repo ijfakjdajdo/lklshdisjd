@@ -86,5 +86,3 @@ for i in crondic:
     ymlPath = './.github/workflows/' + i['fileName'] + '.yml'
     with open(ymlPath, 'w') as f:
         f.write(template.safe_substitute(i))
-
-# 能看到这说明你确实可以，能用，可fork，勿宣传，勿宣传！再卑微地求个star
