@@ -13,6 +13,7 @@ res中的元素示例:
 '''
 res = []
 count = 0
+# 将数据转成数组
 for i in rarr[5:]:
     # 无用行
     if "#短期活动#" in i or "#长期活动#" in i or i == '':
@@ -53,7 +54,7 @@ crondic中的元素示例:
     'actionName': 'jd_dreamFactory_惊喜工厂'
 }
 '''
-# convert array to dict
+# 将数组转成字典
 crondic = []
 for i in res:
     if i[0] == "签到": # 懒得处理的特别情况
@@ -79,10 +80,24 @@ for i in res:
 # print(crondic)
 # exit()
 
+# 打开模版
 with open('./template.txt', 'r') as f:
     template = Template(f.read())
 
+# 写入文件
 for i in crondic:
     ymlPath = './.github/workflows/' + i['fileName'] + '.yml'
     with open(ymlPath, 'w') as f:
         f.write(template.safe_substitute(i))
+
+# 输出crontab_list中没有的文件，可能为过期action
+valid_actions_filename_with_extension = []
+for i in crondic:
+    valid_actions_filename_with_extension.append(i['fileName'] + '.yml')
+all_actions = os.listdir('./.github/workflows')
+actions_maybe_not_valid = []
+for i in all_actions:
+    if i not in valid_actions_filename_with_extension:
+        actions_maybe_not_valid.append(i)
+print('Actions that are not in crontab_list.sh:')
+print(actions_maybe_not_valid)
