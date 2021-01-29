@@ -7,6 +7,10 @@ crontab_URL = "https://github.com/VidocqH/jd_scripts/raw/master/docker/crontab_l
 r = requests.get(crontab_URL)
 rarr = r.text.splitlines()
 
+'''
+res中的元素示例:
+['东东超市', '11 0-15,17-23/5 * * *', 'node /scripts/jd_superMarket.js']
+'''
 res = []
 count = 0
 for i in rarr[5:]:
@@ -27,7 +31,7 @@ for i in rarr[5:]:
         # 5-6元素为脚本执行命令
         cron = ' '.join(iarr[:5])
         comm = ' '.join(iarr[5:])
-        cron = convert_cron(cron, 'Asia/Shanghai', 'Europe/London')
+        cron = convert_cron(cron, 'Asia/Shanghai', 'Europe/London') # cron时区转换: https://github.com/VidocqH/cron-timezone-convert
         res[count].append(cron)
         res[count].append(comm)
         count += 1
@@ -35,7 +39,20 @@ for i in rarr[5:]:
         # action名字行
         name = i[1:].strip()
         res.append([name])
+# print(res)
+# exit()
 
+'''
+crondic中的元素示例:
+{
+    'nameCN': '京喜工厂',
+    'nameEN': 'dreamFactory',
+    'cron': '20 * * * *',
+    'comm': 'node jd_dreamFactory.js',
+    'fileName': 'jd_dreamFactory',
+    'actionName': 'jd_dreamFactory_惊喜工厂'
+}
+'''
 # convert array to dict
 crondic = []
 for i in res:
@@ -45,23 +62,29 @@ for i in res:
             'nameEN': 'bean_sign',
             'cron': i[1],
             'comm': 'node jd_bean_sign.js',
-            'filename': 'jd_bean_sign'
+            'fileName': 'jd_bean_sign',
+            'actionName': 'jd_bean_sign_签到'
         })
     else:
-        if i[1][0] == '#': # 此条cron被注释
+        if i[1][0] == '#': # 上游中此条cron被注释, 如jd_family
             continue
         crondic.append({
             'nameCN': i[0],
             'nameEN': i[2][i[2].rfind('/')+4:len(i[2])-3],
             'cron': i[1],
             'comm': 'node ' + i[2][i[2].rfind('/')+1:], # node xxx.js
-            'filename': i[2][i[2].rfind('/')+1:len(i[2])-3] # 无拓展名的文件名
+            'fileName': i[2][i[2].rfind('/')+1:len(i[2])-3], # 无拓展名的文件名
+            'actionName': i[2][i[2].rfind('/')+1:len(i[2])-3] + '_' + i[0]
         })
+# print(crondic)
+# exit()
 
 with open('./template.txt', 'r') as f:
     template = Template(f.read())
 
 for i in crondic:
-    ymlPath = './.github/workflows/' + i['filename'] + '.yml'
+    ymlPath = './.github/workflows/' + i['fileName'] + '.yml'
     with open(ymlPath, 'w') as f:
         f.write(template.safe_substitute(i))
+
+# 能看到这说明你确实可以，能用，可fork，勿宣传，勿宣传！再卑微地求个star
