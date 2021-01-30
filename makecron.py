@@ -3,9 +3,13 @@ import requests
 from string import Template
 from crontzconvert import convert as convert_cron
 
-crontab_URL = "https://github.com/VidocqH/jd_scripts/raw/master/docker/crontab_list.sh"
-r = requests.get(crontab_URL)
-rarr = r.text.splitlines()
+try:
+    crontab_URL = "https://github.com/VidocqH/jd_scripts/raw/master/docker/crontab_list.sh"
+    r = requests.get(crontab_URL)
+    rarr = r.text.splitlines()
+except:
+    print("网络错误")
+    exit()
 
 '''
 res中的元素示例:
@@ -14,7 +18,7 @@ res中的元素示例:
 res = []
 count = 0
 # 将数据转成数组
-for i in rarr[5:]:
+for i in rarr[3:]:
     # 无用行
     if "#短期活动#" in i or "#长期活动#" in i or i == '':
         continue
