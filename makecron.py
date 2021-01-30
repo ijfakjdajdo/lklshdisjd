@@ -17,6 +17,7 @@ res中的元素示例:
 '''
 res = []
 count = 0
+is_new_cron = True
 # 将数据转成数组
 for i in rarr[3:]:
     # 无用行
@@ -29,7 +30,7 @@ for i in rarr[3:]:
     i = i[:idx]
     if "node" in i:
         # crontab行
-        i = i.rstrip()
+        i = i.rstrip() # 去除后方空格
         iarr = i.split(" ")
         # Normalize GMT+8 to GMT+0
         # 0-4元素为cron
@@ -37,15 +38,19 @@ for i in rarr[3:]:
         cron = ' '.join(iarr[:5])
         comm = ' '.join(iarr[5:])
         cron = convert_cron(cron, 'Asia/Shanghai', 'Europe/London') # cron时区转换: https://github.com/VidocqH/cron-timezone-convert
+        if not is_new_cron:
+            res.append([res[-1][0]])
         res[count].append(cron)
         res[count].append(comm)
         count += 1
+        is_new_cron = False
     else:
         # action名字行
-        name = i[1:].strip()
+        name = i[1:].strip() # 去空格和#
         res.append([name])
-# print(res)
-# exit()
+        is_new_cron = True
+#  print(res)
+#  exit()
 
 '''
 crondic中的元素示例:
