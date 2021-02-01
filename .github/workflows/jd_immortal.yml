@@ -6,7 +6,7 @@ name: jd_immortal_京东神仙书院(活动时间:2021-1-20至2021-2-5)
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 22 * * *'
+    - cron: '30 0,4,14,22 * * *'
   watch:
     types: [started]
   repository_dispatch:

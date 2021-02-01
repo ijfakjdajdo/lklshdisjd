@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: jd_xgyl_小鸽有礼2
+name: jd_xgyl_小鸽有礼2(活动时间：2021年1月28日～2021年2月28日)
 
 on:
   workflow_dispatch:
@@ -39,7 +39,7 @@ jobs:
       - name: run script
         run: |
           python3 sorryLXK.py
-      - name: '运行 【小鸽有礼2】'
+      - name: '运行 【小鸽有礼2(活动时间：2021年1月28日～2021年2月28日)】'
         run: |
           node jd_xgyl.js
         env:
