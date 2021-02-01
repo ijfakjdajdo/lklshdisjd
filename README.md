@@ -8,5 +8,3 @@
 [LXK yyds](https://gitee.com/lxk0301/jd_scripts/tree/master/)
 
 [可迷核实崔](https://github.com/VidocqH/jd_scripts/commits/master)
-
-~~淦，clone点个star好吗~~
