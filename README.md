@@ -8,3 +8,5 @@
 [LXK yyds](https://gitee.com/lxk0301/jd_scripts/tree/master/)
 
 [可迷核实崔](https://github.com/VidocqH/jd_scripts/commits/master)
+
+~~If you know how to setup, you can use~~
