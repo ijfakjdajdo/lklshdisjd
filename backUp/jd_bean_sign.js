@@ -13,9 +13,9 @@ const $ = new Env('京豆签到');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
-const exec = require('child_process').execSync
-const fs = require('fs')
-const download = require('download');
+const exec = $.isNode() ? require('child_process').execSync : '';
+const fs = $.isNode() ? require('fs') : '';
+const download = $.isNode() ? require('download') : '';
 let resultPath = "./result.txt";
 let JD_DailyBonusPath = "./JD_DailyBonus.js";
 let outPutUrl = './';
@@ -27,27 +27,63 @@ if ($.isNode()) {
     cookiesArr.push(jdCookieNode[item])
   })
   if (process.env.JD_DEBUG && process.env.JD_DEBUG === 'false') console.log = () => {};
+} else {
+  let cookiesData = $.getdata('CookiesJD') || "[]";
+  cookiesData = jsonParse(cookiesData);
+  cookiesArr = cookiesData.map(item => item.cookie);
+  cookiesArr.reverse();
+  cookiesArr.push(...[$.getdata('CookieJD2'), $.getdata('CookieJD')]);
+  cookiesArr.reverse();
+  cookiesArr = cookiesArr.filter(item => item !== "" && item !== null && item !== undefined);
 }
 !(async() => {
   if (!cookiesArr[0]) {
     $.msg($.name, '【提示】请先获取cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
     return;
   }
-  await requireConfig();
-  // 下载最新代码
-  await downFile();
-  const content = await fs.readFileSync(JD_DailyBonusPath, 'utf8')
-  for (let i =0; i < cookiesArr.length; i++) {
-    cookie = cookiesArr[i];
-    if (cookie) {
-      $.UserName = decodeURIComponent(cookie.match(/pt_pin=(.+?);/) && cookie.match(/pt_pin=(.+?);/)[1])
-      $.index = i + 1;
-      $.nickName = '';
-      await TotalBean();
-      console.log(`*****************开始京东账号${$.index} ${$.nickName || $.UserName}京豆签到*******************\n`);
-      console.log(`⚠️⚠️⚠️⚠️目前Bark APP推送通知消息对推送内容长度有限制，如推送通知中包含此推送方式脚本会默认转换成简洁内容推送 ⚠️⚠️⚠️⚠️\n`)
-      await changeFile(content);
-      await execSign();
+  if ($.isNode()) {
+    await requireConfig();
+    // 下载最新代码
+    await downFile();
+    const content = await fs.readFileSync(JD_DailyBonusPath, 'utf8')
+    for (let i =0; i < cookiesArr.length; i++) {
+      cookie = cookiesArr[i];
+      if (cookie) {
+        $.UserName = decodeURIComponent(cookie.match(/pt_pin=(.+?);/) && cookie.match(/pt_pin=(.+?);/)[1])
+        $.index = i + 1;
+        $.nickName = '';
+        await TotalBean();
+        console.log(`*****************开始京东账号${$.index} ${$.nickName || $.UserName}京豆签到*******************\n`);
+        console.log(`⚠️⚠️⚠️⚠️目前Bark APP推送通知消息对推送内容长度有限制，如推送通知中包含此推送方式脚本会默认转换成简洁内容推送 ⚠️⚠️⚠️⚠️\n`)
+        await changeFile(content);
+        await execSign();
+      }
+    }
+  } else {
+    await downloadUrl();
+    if (!$.body) await downloadUrl('https://cdn.jsdelivr.net/gh/NobyDa/Script@master/JD-DailyBonus/JD_DailyBonus.js');
+    // await $.wait(10 * 1000)
+    // const promiseArr = cookiesArr.map(ck => evalSign(ck));
+    // await Promise.all(promiseArr);
+    for (let i = 0; i < cookiesArr.length; i++) {
+      cookie = cookiesArr[i];
+      if (cookie) {
+        console.log(`*****************开始京东账号${i + 1}京豆签到*******************\n`);
+        $.body = $.body.replace(/var Key = '.*'/, `var Key = '${cookie}'`)
+        await new Promise((resolve) => {
+          $.resolve = resolve
+          $.body = $.body.replace(/\$done/g, '$.resolve')
+          $.body = $.body.replace(/\$\.done/g, '$.resolve')
+          $.log($.body)
+          try {
+            eval($.body)
+          } catch (e) {
+            $.logErr(e)
+          } finally {
+            resolve()
+          }
+        })
+      }
     }
   }
 })()
@@ -242,6 +278,19 @@ function downloadUrl(url = 'https://raw.githubusercontent.com/NobyDa/Script/mast
     })
   })
 }
+function evalSign(data) {
+  return new Promise(async resolve => {
+    try {
+      $.body = $.body.replace(/var Key = '.*'/, `var Key = '${data}'`)
+      await eval($.body);
+      // await $.wait(10 * 1000);
+    } catch (e) {
+      $.logErr(e)
+    } finally {
+      resolve()
+    }
+  })
+}
 function requireConfig() {
   return new Promise(resolve => {
     const file = 'jd_bean_sign.js';
@@ -253,6 +302,17 @@ function requireConfig() {
       resolve()
     });
   })
+}
+function jsonParse(str) {
+  if (typeof str == "string") {
+    try {
+      return JSON.parse(str);
+    } catch (e) {
+      console.log(e);
+      $.msg($.name, '', '请勿随意在BoxJs输入框修改内容\n建议通过脚本去获取cookie')
+      return [];
+    }
+  }
 }
 function timeFormat(time) {
   let date;
