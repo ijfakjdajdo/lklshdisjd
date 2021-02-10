@@ -6,7 +6,7 @@ name: jd_newYearMoney_lottery_京东压岁钱抢百元卡(活动时间：2021-2-
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1,4,8,12 * * *'
+    - cron: '0 1,4,8,12 1-11 2 *'
   watch:
     types: [started]
   repository_dispatch:
