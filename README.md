@@ -10,3 +10,11 @@
 [可迷核实崔](https://github.com/VidocqH/jd_scripts/commits/master)
 
 ~~If you know how to setup, you can use~~
+
+How to enable actions:
+
+```bash
+node actions_openner.js owner repo
+# Example:
+node actions_openner.js vidocqh jd_actions_vi
+```
