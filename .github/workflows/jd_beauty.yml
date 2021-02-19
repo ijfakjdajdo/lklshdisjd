@@ -1,16 +1,16 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: jd_joy_steal_宠汪汪偷好友积分与狗粮
+name: jd_beauty_美丽研究院
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '13 0-13,16-23/3 * * *'
+    - cron: '1 4,11,23 * * *'
   watch:
     types: [started]
   repository_dispatch:
-    types: joy_steal
+    types: beauty
 jobs:
   build:
 
@@ -39,9 +39,9 @@ jobs:
       - name: run script
         run: |
           python3 sorryLXK.py
-      - name: '运行 【宠汪汪偷好友积分与狗粮】'
+      - name: '运行 【美丽研究院】'
         run: |
-          node jd_joy_steal.js
+          node jd_beauty.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
