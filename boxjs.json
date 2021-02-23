@@ -1,0 +1,25 @@
+{
+  "id": "oxo.app.sub",
+  "name": "oxo应用订阅",
+  "author": "@oxo",
+  "icon": "https://raw.githubusercontent.com/kaksaia/xxx/main/taotie.png",
+  "repo": "https://github.com/kaksaia/xxx",
+  "apps": [
+    {
+      "author" : "@sunert",
+      "keys" : [
+        "sy_payheader_wb",
+        "sy_token_wb",
+        "wb_nick"
+      ],
+      "repo" : "https://raw.githubusercontent.com/kaksaia/xxx/main/weibo.js",
+      "id" : "weibo",
+      "script" : "https://raw.githubusercontent.com/kaksaia/xxx/main/weibo.js",
+      "name" : "新浪微博",
+      "icons" : [
+        "https:\/\/raw.githubusercontent.com\/Orz-3\/mini\/master\/weibo.png",
+        "https:\/\/raw.githubusercontent.com\/Orz-3\/task\/master\/weibo.png"
+      ]
+    }
+  ]
+}
