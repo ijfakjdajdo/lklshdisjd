@@ -24,7 +24,7 @@
 19 1 * * * https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js, tag=快看漫画, img-url=https://raw.githubusercontent.com/Orz-3/task/master/KuaiKan.png, enabled=true
 20 1 * * * https://gitee.com/passerby-b/javascript/raw/master/unipay.js, tag=云闪付签到, img-url=https://raw.githubusercontent.com/Orz-3/task/master/unipay.png, enabled=true
 21 1 * * * https://raw.githubusercontent.com/DD-D1/2020scripts/master/jddsSign.js, tag=京东读书, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jdds.png, enabled=true
-22 1 * * * https://raw.githubusercontent.com/kaksaia/xxx/main/air.js, tag=桔子云, img-url=https://raw.githubusercontent.com/Orz-3/Task/master/airport.png, enabled=true
+22 1 * * * https://raw.githubusercontent.com/kaksaia/kdhh/xxx/checkin.js, tag=桔子云, img-url=https://raw.githubusercontent.com/Orz-3/Task/master/airport.png, enabled=true
 20 6 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.js, tag=WPS, img-url=https://raw.githubusercontent.com/Orz-3/task/master/wps.png, enabled=true
 0 8-20/1 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/moji.js, tag=墨迹天气, img-url=https://raw.githubusercontent.com/Orz-3/task/master/weather.png, enabled=true
 13 7 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/Alipay/Alipay.js, tag=支付宝积分能量, img-url=https://raw.githubusercontent.com/Orz-3/task/master/alipay.png, enabled=true
