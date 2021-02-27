@@ -33,6 +33,8 @@
 30 7 * * * https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/nasa/nasapic.js, tag=NASA每日一图, img-url=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/picture/nasa.png, enabled=true
 30 9 * * * https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/idaily/idaily.js, tag=iDaily每日环球视野, img-url=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/picture/idaily.png, enabled=true
 1 8-22 * * * https://raw.githubusercontent.com/ZCY01/daily_scripts/main/app/free_app_detect.js, tag=限免APP, img-url=https://raw.githubusercontent.com/Orz-3/task/master/appstore.png, enabled=true
+5 */10 1-22 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js, timeout=180, tag=中青看点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true
+11 1 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth_gain.js, timeout=1800, tag=中青看点看看赚, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true
 30 6-20/2 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/baidu_speed.js, tag=百度极速版, img-url=https://raw.githubusercontent.com/ChuheGit/1/main/QuantumultX/Gallery/API-Icon/baidu_speed.png, enabled=true
 */5 * * * * https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/dyjsb.js, tag=抖音极速版, img-url=https://raw.githubusercontent.com/Orz-3/task/master/neteasemusic.png, enabled=true
 50 9 * * * https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js, tag=伊利乳品, img-url=https://raw.githubusercontent.com/id77/QuantumultX/master/icon/yiLi.png, enabled=true
@@ -89,7 +91,7 @@
 0 0 * * * https://raw.githubusercontent.com/58xinian/Surge/master/Script/jx_cfdtx.js, tag=京喜财富岛提现, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jx_cfd_dark.png, enabled=true
 13 */1 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_family.js, tag=京东家庭号, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_family.png, enabled=false
 14 8,12,18 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_bookshop.js, tag=口袋书店, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_bookshop.png, enabled=true
-15 7,12,19 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_beauty.js, tag=美丽研究院, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
+15 7,12,19 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_beauty.js, tag=美丽研究院, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=false
 45 13,23 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_unsubscribe.js, tag=取关京东店铺商品, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_unsubscribe.png, enabled=true
 55 23 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_price.js, tag=京东价格保护, img-url=https://raw.githubusercontent.com/ZCY01/img/master/pricev1.png, enabled=true
 30 10 * * * https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/jd_try.js, tag=京东试用, img-url=https://raw.githubusercontent.com/ZCY01/img/master/jdtryv1.png, enabled=true
