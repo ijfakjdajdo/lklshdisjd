@@ -34,7 +34,6 @@
 30 9 * * * https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/idaily/idaily.js, tag=iDaily每日环球视野, img-url=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/picture/idaily.png, enabled=true
 1 8-22 * * * https://raw.githubusercontent.com/ZCY01/daily_scripts/main/app/free_app_detect.js, tag=限免APP, img-url=https://raw.githubusercontent.com/Orz-3/task/master/appstore.png, enabled=true
 5 */10 1-22 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js, timeout=180, tag=中青看点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true
-11 1 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth_gain.js, timeout=1800, tag=中青看点看看赚, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true
 30 6-20/2 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/baidu_speed.js, tag=百度极速版, img-url=https://raw.githubusercontent.com/ChuheGit/1/main/QuantumultX/Gallery/API-Icon/baidu_speed.png, enabled=true
 */5 * * * * https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/dyjsb.js, tag=抖音极速版, img-url=https://raw.githubusercontent.com/Orz-3/task/master/neteasemusic.png, enabled=true
 50 9 * * * https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js, tag=伊利乳品, img-url=https://raw.githubusercontent.com/id77/QuantumultX/master/icon/yiLi.png, enabled=true
