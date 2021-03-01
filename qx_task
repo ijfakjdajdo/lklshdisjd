@@ -3,7 +3,7 @@
 3 3 * * * https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.js, tag=微博超话, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/weibo.png, enabled=true
 4 3 * * * https://raw.githubusercontent.com/iepngs/Script/master/ikuuu/index.js, tag=iKuuu, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/airport.png, enabled=true
 5 3 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js, tag=人人视频, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/rrtv.png, enabled=true
-6 3 * * * https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js, tag=吾爱破解, img-url= https://raw.githubusercontent.com/Orz-3/mini/master/52pj.png, enabled=true
+6 3 * * * https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js, tag=吾爱破解, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/52pj.png, enabled=true
 7 3 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, tag=哔哩哔哩, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/bilibili.png, enabled=true
 7 3 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js, tag=哔哩银瓜子转硬币, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/bilibili.png, enabled=false
 8 3 * * * https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/10010/unicom_checkin.js, tag=联通签到&抽奖, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/10010.png, enabled=true
@@ -101,4 +101,3 @@
 1 4 * * 1 https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_deleteCoupon.js, tag=京东删除优惠券, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=true
 0 10 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_bean_change.js, tag=京豆变动通知, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_bean_change.png, enabled=true
 47 7 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_get_share_code.js, tag=获取互助码, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_get_share_code.png, enabled=true
-
