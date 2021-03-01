@@ -61,6 +61,7 @@
 16 0 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_jdzz.js, tag=京东赚赚, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdzz.png, enabled=true
 16 0 * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.js, tag=京东赚赚, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdzz.png, enabled=true
 17 0 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_syj.js, tag=赚京豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_syj.png, enabled=true
+10 * * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jd_zjd_tuan.js, tag=京东赚京东开团, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_syj.png, enabled=true
 18 0 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_bean_home.js, tag=领京豆额外奖励, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_bean_home.png, enabled=true
 19 0,20 * * * https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_shake.js, tag=摇一摇, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
 20 0 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_ms.js, tag=京东秒秒币, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/main/Icon/shylocks/jd_ms.jpg, enabled=true
@@ -89,7 +90,7 @@
 6 3,5 * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_factory_component.js, tag=京喜工厂Plus, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdgc.png, enabled=false
 30 8,13,19 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_cfd.js, tag=京喜财富岛, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxcfd.png, enabled=true
 12 8,13,19 * * * https://raw.githubusercontent.com/moposmall/Script/main/Me/jx_cfd.js, tag=京喜财富岛, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxcfd.png, enabled=true
-0 0 * * * https://raw.githubusercontent.com/58xinian/Surge/master/Script/jx_cfdtx.js, tag=京喜财富岛提现, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jx_cfd_dark.png, enabled=true
+0 0 * * * https://github.com/utterliar1/Scripts/raw/master/JS-bak/whyour/jx_cfdtx.js, tag=京喜财富岛提现, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jx_cfd_dark.png, enabled=true
 13 */1 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_family.js, tag=京东家庭号, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_family.png, enabled=false
 14 8,12,18 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_bookshop.js, tag=口袋书店, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_bookshop.png, enabled=true
 15 7,12,19 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_beauty.js, tag=美丽研究院, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=false
@@ -99,5 +100,3 @@
 1 4 * * 1 https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_deleteCoupon.js, tag=京东删除优惠券, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=true
 30 10 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_bean_change.js, tag=京豆变动通知, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_bean_change.png, enabled=true
 20 13 * * 6 https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_get_share_code.js, tag=获取互助码, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_get_share_code.png, enabled=true
-
-
