@@ -61,7 +61,6 @@
 10 11 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_jdzz.js, tag=京东赚赚, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdzz.png, enabled=true
 10 11 * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.js, tag=京东赚赚, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdzz.png, enabled=true
 36 8,18 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_syj.js, tag=赚京豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_syj.png, enabled=true
-10 * * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jd_zjd_tuan.js, tag=京东赚京东开团, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_syj.png, enabled=true
 33 4 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_bean_home.js, tag=领京豆额外奖励, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_bean_home.png, enabled=true
 10 7 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_ms.js, tag=京东秒秒币, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/main/Icon/shylocks/jd_ms.jpg, enabled=true
 10 7 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_crazy_joy.js, tag=crazyJoy任务, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_crazy_joy.png, enabled=true
