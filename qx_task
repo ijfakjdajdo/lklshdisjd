@@ -45,7 +45,8 @@
 0 0 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_club_lottery.js, tag=摇京豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdyjd.png, enabled=false
 10 0 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_shop.js, tag=进店领豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=false
 1 1 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_redPacket.js, tag=京东全民开红包, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_redPacket.png, enabled=false
-11 1 * * * https://github.com/yangtingxiao/QuantumultX/raw/master/scripts/jd/jd_lotteryMachine.js, tag=京东抽奖机, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jdlottery.png, enabled=false
+11 1 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_lotteryMachine.js, tag=京东抽奖机, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jdlottery.png, enabled=false
+11 1 * * * https://github.com/yangtingxiao/QuantumultX/raw/master/scripts/jd/jd_lotteryMachine.js, tag=京东抽奖机, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jdlottery.png, enabled=true
 11 9 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_rankingList.js, tag=京东排行榜, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=false
 11 9 * * * https://github.com/yangtingxiao/QuantumultX/raw/master/scripts/jd/jd_rankingList.js, tag=京东排行榜, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=false
 20 0,20 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_necklace.js, tag=京东点点券, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_necklace.png, enabled=false
@@ -67,6 +68,7 @@
 10 12 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_crazy_joy_bonus.js, tag=监控crazyJoy分红, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_crazy_joy.png, enabled=false
 1 1,6 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_speed_sign.js, tag=京东极速版, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=false
 19 0,20 * * * https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_shake.js, tag=摇一摇, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
+3 10 1 * * https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_shakeBean.js, tag=京豆会员摇京豆, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
 0 12 * * * https://raw.githubusercontent.com/id77/QuantumultX/master/task/jdWuLiu.js, tag=京东物流派件提醒, img-url=https://raw.githubusercontent.com/id77/QuantumultX/master/icon/jdWuLiu.png, enabled=true
 5 6-18/6 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_fruit.js, tag=东东农场, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdnc.png, enabled=false
 5 6-18/6 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_pet.js, tag=东东萌宠, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdmc.png, enabled=false
@@ -75,7 +77,7 @@
 15 */1 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_joy_feedPets.js, tag=宠汪汪喂食, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_joy_feedPets.png, enabled=false
 13 0-21/3 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_joy_steal.js, tag=宠汪汪偷好友积分与狗粮, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_joy_steal.png, enabled=false
 0 0-16/8 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_joy_reward.js, tag=宠汪汪积分兑换, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_joy_reward.png, enabled=true
-10 9-20/2 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_joy_run.js, tag=宠汪汪邀请助力, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_joy_run.png, enabled=true
+10 9-20/2 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_joy_run.js, tag=宠汪汪邀请助力, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_joy_run.png, enabled=false
 8 */3 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_speed.js, tag=京东天天加速, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_speed_dark.png, enabled=false
 11 1-23/5 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_superMarket.js, tag=东东超市, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxc.png, enabled=false
 58,59,0,1,2 59,0,30 0,23 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_blueCoin.js, tag=东东超市兑换, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxc.png, enabled=true
@@ -99,3 +101,5 @@
 1 4 * * 1 https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_deleteCoupon.js, tag=京东删除优惠券, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=true
 0 10 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_bean_change.js, tag=京豆变动通知, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_bean_change.png, enabled=false
 47 7 * * * https://raw.githubusercontent.com/kaksaia/kdhh/lxk0301/jd_get_share_code.js, tag=获取互助码, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_get_share_code.png, enabled=false
+
+
