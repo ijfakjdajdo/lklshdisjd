@@ -1,0 +1,30 @@
+# File: .github/workflows/repo-sync.yml
+name: sync-jd_base
+on:
+  schedule:
+    - cron: '5 0,15 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-jd-base
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ github.event.client_payload.PAT || secrets.PAT }} #此处PAT需要申请，教程详见：https://www.jianshu.com/p/bb82b3ad1d11
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync jd-base
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/RikudouPatrickstar/jd-base.git"
+          source_branch: "v3"
+          destination_branch: "base"
+          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
+
