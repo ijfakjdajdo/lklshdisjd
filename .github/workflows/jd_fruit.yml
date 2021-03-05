@@ -69,3 +69,6 @@ jobs:
           JDSGMH_SHARECODES: ${{ secrets.JDSGMH_SHARECODES }}
           JDNIAN_SHARECODES: ${{ secrets.JDNIAN_SHARECODES }}
           JDSXSY_SHARECODES: ${{ secrets.JDSXSY_SHARECODES }}
+          FRUIT_BEAN_CARD: ${{ secrets.FRUIT_BEAN_CARD }}
+          
+          
