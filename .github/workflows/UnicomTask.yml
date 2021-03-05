@@ -32,5 +32,5 @@ jobs:
       env:
         USERS_COVER: ${{ secrets.USERS_COVER }}
       run: |
-        echo "$USERS_COVER" > ./Unicom/config.json
-        python Unicom/main.py
+        echo "$USERS_COVER" > ./other/config.json
+        python other/main.py
