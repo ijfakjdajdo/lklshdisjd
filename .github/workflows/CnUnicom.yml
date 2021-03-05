@@ -30,4 +30,4 @@ jobs:
           env:
            PARAMETER: ${{ secrets.PARAMETER }}
           run: |
-           bash Unicom/CnUnicom.sh $PARAMETER
+           bash other/CnUnicom.sh $PARAMETER
