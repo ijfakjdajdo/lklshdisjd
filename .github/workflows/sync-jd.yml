@@ -28,3 +28,11 @@ jobs:
           destination_branch: "base"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
 
+      - name: sync jd-shell
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/nevinee/jd_shell.git"
+          source_branch: "master"
+          destination_branch: "nevinee"
+          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
