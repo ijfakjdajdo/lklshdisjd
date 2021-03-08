@@ -36,3 +36,12 @@ jobs:
           source_branch: "master"
           destination_branch: "nevinee"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
+
+      - name: sync jd-base
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/dockere/jd-base.git"
+          source_branch: "master"
+          destination_branch: "dockere"
+          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
