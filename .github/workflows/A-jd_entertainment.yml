@@ -6,7 +6,7 @@ name: jd_entertainment_百变大咖秀
 on:
   workflow_dispatch:
   schedule:
-    - cron: '10 2,3 * *'
+    - cron: '10 2,3 * * *'
   watch:
     types: [started]
   repository_dispatch:
