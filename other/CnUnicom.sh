@@ -205,11 +205,11 @@ function membercenter() {
     
     # 游戏宝箱
     echo && echo
-    curl -m 10 -X POST -sA "$UA" -b $workdir/cookie --data "methodType=reward&deviceType=Android&clientVersion=$unicom_version&isVideo=N" https://m.client.10010.com/game_box
+    curl -m 10 -X POST -sA "$UA" -b $workdir/cookie --data "methodType=reward&deviceType=Android&clientVersion=$unicom_version&isVideo=N" https://m.client.10010.com/game_box; sleep 3
     echo && echo
-    curl -m 10 -sA "$UA" -b $workdir/cookie --data "methodType=taskGetReward&taskCenterId=187&clientVersion=$unicom_version&deviceType=Android" https://m.client.10010.com/producGameTaskCenter
+    curl -m 10 -sA "$UA" -b $workdir/cookie --data "methodType=taskGetReward&taskCenterId=187&clientVersion=$unicom_version&deviceType=Android" https://m.client.10010.com/producGameTaskCenter; sleep 3
     echo && echo
-    curl -m 10 -X POST -sA "$UA" -b $workdir/cookie --data "methodType=reward&deviceType=Android&clientVersion=$unicom_version&isVideo=Y" https://m.client.10010.com/game_box
+    curl -m 10 -X POST -sA "$UA" -b $workdir/cookie --data "methodType=reward&deviceType=Android&clientVersion=$unicom_version&isVideo=Y" https://m.client.10010.com/game_box; sleep 3
     
     # 沃之树浇水，免费一次，服务器经常502错误，所以请求三次
     echo && echo
@@ -365,7 +365,7 @@ function formatsendinfo() {
     if $(echo ${all_parameter[*]} | grep -qE "sendsimple"); then
         echo ${userlogin_ook[u]} ${#userlogin_ook[*]} Accomplished. ${userlogin_err[u]} ${#userlogin_err[*]} Failed. >$formatsendinfo_file
         echo ${all_parameter[*]} | grep -qE "otherinfo"     && echo 可用余额:$curntbalancecust 实时话费:$realfeecust >>$formatsendinfo_file
-        echo ${all_parameter[*]} | grep -qE "jifeninfo"     && echo 积分:$total-$availablescore-$todayscore >>$formatsendinfo_file
+        echo ${all_parameter[*]} | grep -qE "jifeninfo"     && echo 积分:$total-$availablescore-$yesterdayscore/$todayscore >>$formatsendinfo_file
         echo ${all_parameter[*]} | grep -qE "hfgoactive"    && echo 话费购奖品: $(cat $workdir/hfgoactive.info | tail -n +2) >>$formatsendinfo_file
         echo ${all_parameter[*]} | grep -qE "freescoregift" && echo 定向积分免费商品数量:$(cat $workdir/freescoregift.info | tail -n +3 | grep -cv '^$') >>$formatsendinfo_file
         echo ${all_parameter[*]} | grep -qE "liulactive" && [[ -f $workdir/liulactive.info ]] && echo 流量激活: $(cat $workdir/liulactive.info) >>$formatsendinfo_file
@@ -385,21 +385,21 @@ function telegrambot() {
     echo ${all_parameter[*]} | grep -qE "token@[a-zA-Z0-9:_-]+" && token="$(echo ${all_parameter[*]} | grep -oE "token@[a-zA-Z0-9:_-]+" | cut -f2 -d@)" || return 0
     echo ${all_parameter[*]} | grep -qE "chat_id@[0-9-]+" && chat_id="$(echo ${all_parameter[*]} | grep -oE "chat_id@[0-9-]+" | cut -f2 -d@)" || return 0
     echo && echo starting telegrambot...
-    curl -m 10 -sX POST "https://api.telegram.org/bot$token/sendMessage" -d "chat_id=$chat_id&text=$(cat $formatsendinfo_file)"
+    curl -m 10 -sX POST "https://api.telegram.org/bot$token/sendMessage" -d "chat_id=$chat_id&text=$(cat $formatsendinfo_file)" >/dev/null;
 }
 
 function serverchan() {
     # serverchan旧版通知消息: sckey@************
     echo ${all_parameter[*]} | grep -qE "sckey@[a-zA-Z0-9:_-]+" && sckey="$(echo ${all_parameter[*]} | grep -oE "sckey@[a-zA-Z0-9:_-]+" | cut -f2 -d@)" || return 0
     echo && echo starting serverchan...
-    curl -m 10 -sX POST "https://sc.ftqq.com/$sckey.send" -d "text=$(cat $formatsendinfo_file)"
+    curl -m 10 -sX POST "https://sc.ftqq.com/$sckey.send" -d "text=$(cat $formatsendinfo_file)" >/dev/null;
 }
 
 function bark() {
     # bark通知消息: bark@************;bark推送不编码有换行推送不了，用tr空格替换了,推送效果极差
     echo ${all_parameter[*]} | grep -qE "bark@[a-zA-Z0-9:_-]+" && bark="$(echo ${all_parameter[*]} | grep -oE "bark@[a-zA-Z0-9:_-]+" | cut -f2 -d@)" || return 0
     echo && echo starting bark...
-    curl -m 10 -sX POST "https://api.day.app/$bark/$(cat $formatsendinfo_file | tr "\n" " ")"
+    curl -m 10 -sX POST "https://api.day.app/$bark/$(cat $formatsendinfo_file | tr "\n" " ")" >/dev/null;
 }
 
 function main() {
