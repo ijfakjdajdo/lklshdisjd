@@ -21,7 +21,7 @@ is_new_cron = True
 # 将数据转成数组
 for i in rarr[3:]:
     # 无用行
-    if "#短期活动#" in i or "#长期活动#" in i or i == '':
+    if "#短期活动#" in i or "#长期活动#" in i or i == '' or '美丽研究院' in i:
         continue
     # 处理>>符号
     idx = i.find(">")
@@ -76,7 +76,7 @@ for i in res:
             'actionName': 'jd_bean_sign_签到'
         })
     else:
-        if i[1][0] == '#': # 上游中此条cron被注释, 如jd_family
+        if i[1][0] == '#': # 上游中此条cron被注释或被删除, 如jd_family
             continue
         crondic.append({
             'nameCN': i[0],
