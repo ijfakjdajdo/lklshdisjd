@@ -335,7 +335,7 @@ def dayOneG_Task():
 def readJson():
     try:
         #用户配置信息
-        with open('./config.json','r') as fp:
+        with open('./other/config.json','r') as fp:
             users = json.load(fp)
             return users
     except Exception as e:
