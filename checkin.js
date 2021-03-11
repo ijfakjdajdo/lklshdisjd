@@ -19,7 +19,7 @@ QuantumultX 本地脚本配置:
 https:\/\/juzicloud\.net\/user\/profile url script-request-header https://raw.githubusercontent.com/kaksaia/xxx/main/air.js
 
 [mitm] 
-hostname = juzicloud.net
+hostname = juzicloud.org
 
 ************************
 Loon 2.1.0+ 脚本配置:
@@ -165,13 +165,13 @@ function checkin() {
         $hammer.alert(Protagonist, "cookie没有，先去获取吧!");
         return $hammer.done();
     }
-    const host = `https://juzicloud.net`;
+    const host = `https://juzicloud.org`;
     let options = {
         url: `${host}/user/checkin`,
         headers: {
             "accept": "application/json, text/javascript, */*; q=0.01",
-            "origin": "https://juzicloud.net",
-            "referer": "https://juzicloud.net/user",
+            "origin": "https://juzicloud.org",
+            "referer": "https://juzicloud.org/user",
             "cookie": cookie,
             "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1",
         }
