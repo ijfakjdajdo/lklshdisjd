@@ -1,8 +1,8 @@
-name: 联通UnicomTask
+name: UnicomTask
 
 on:
-  #push:
-    #branches: main
+  push:
+    branches: main
   gollum:
   workflow_dispatch:
   schedule:
@@ -25,6 +25,8 @@ jobs:
         key: ${{ runner.os }}-pip-${{ hashFiles('**/run_in_Actions/requirements.txt') }}
         restore-keys: |
           ${{ runner.os }}-pip-
+    - name: Set time zone
+      run: sudo timedatectl set-timezone 'Asia/Shanghai'
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
