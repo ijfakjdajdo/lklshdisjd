@@ -1,40 +1,4 @@
-/**
-机场签到脚本
 
-说明：
-手动登录 https://juzicloud.net 点击进入“我的信息”页面 如通知成功获取cookie, 则可以使用此签到脚本.
-获取Cookie后, 请将Cookie脚本禁用并移除主机名，以免产生不必要的MITM.
-脚本将在每天上午9点执行。 可以修改执行时间。
-
-************************
-QuantumultX 本地脚本配置:
-************************
-
-[task_local]
-# ikuuu签到
-0 9 * * * https://raw.githubusercontent.com/kaksaia/xxx/main/air.js
-
-[rewrite_local]
-# 获取Cookie
-https:\/\/juzicloud\.net\/user\/profile url script-request-header https://raw.githubusercontent.com/kaksaia/xxx/main/air.js
-
-[mitm] 
-hostname = juzicloud.org
-
-************************
-Loon 2.1.0+ 脚本配置:
-************************
-
-[Script]
-# ikuuu签到
-cron "0 9 * * *" script-path=https://raw.githubusercontent.com/kaksaia/xxx/main/air.js
-
-# 获取Cookie 网站登录后点击我的信息页面
-http-request https:\/\/juzicloud\.net\/user\/profile script-path=https://raw.githubusercontent.com/kaksaia/xxx/main/air.js
-
-[Mitm]
-hostname = juzicloud.net
-**/
 
 const $hammer = (() => {
     const isRequest = "undefined" != typeof $request,
@@ -165,13 +129,13 @@ function checkin() {
         $hammer.alert(Protagonist, "cookie没有，先去获取吧!");
         return $hammer.done();
     }
-    const host = `https://juzicloud.org`;
+    const host = `https://juzi66.com`;
     let options = {
         url: `${host}/user/checkin`,
         headers: {
             "accept": "application/json, text/javascript, */*; q=0.01",
-            "origin": "https://juzicloud.org",
-            "referer": "https://juzicloud.org/user",
+            "origin": "https://juzi66.com",
+            "referer": "https://juzi66.com/user",
             "cookie": cookie,
             "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1",
         }
