@@ -45,3 +45,14 @@ jobs:
           source_branch: "master"
           destination_branch: "dockere"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
+
+      - name: sync jd-script
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/VidocqH/jd_scripts.git"
+          source_branch: "master"
+          destination_branch: "lxk"
+          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
+          
+          
