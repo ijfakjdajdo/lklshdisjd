@@ -21,7 +21,7 @@ is_new_cron = True
 # 将数据转成数组
 for i in rarr[4:]:
     # 无用行
-    if "#短期活动#" in i or "#长期活动#" in i or i == '' or '美丽研究院' in i:
+    if "#短期活动#" in i or "#长期活动#" in i or i == '':
         continue
     # 处理>>符号
     idx = i.find(">")
@@ -85,7 +85,7 @@ for i in res:
             'actionName': i[2][i[2].rfind('/')+1:len(i[2])-3] + '_' + i[0]
         })
 #  print(crondic)
-exit()
+#  exit()
 
 # 打开模版
 with open('./template.txt', 'r') as f:
